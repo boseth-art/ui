@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 // Screens
+import MainDashboard from '../screens/MainDashboard';
 import LoanDashboard from '../screens/LoanDashboard';
 import NewLoan from '../screens/NewLoan';
 import CompareCosts from '../screens/CompareCosts';
@@ -14,7 +15,7 @@ const Stack = createStackNavigator();
 export default function AppNavigator() {
   return (
     <Stack.Navigator
-      initialRouteName="Dashboard"
+      initialRouteName="MainDashboard"
       screenOptions={{
         headerStyle: {
           backgroundColor: COLORS.primary,
@@ -30,7 +31,12 @@ export default function AppNavigator() {
       }}
     >
       <Stack.Screen 
-        name="Dashboard" 
+        name="MainDashboard" 
+        component={MainDashboard} 
+        options={{ title: 'Home' }} 
+      />
+      <Stack.Screen 
+        name="LoanDashboard" 
         component={LoanDashboard} 
         options={{ title: 'Loan Manager' }} 
       />
