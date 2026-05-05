@@ -11,6 +11,7 @@ export default function MainDashboard({ navigation }) {
   const navToSubscription = () => { /* Placeholder */ };
   const navToUtility = () => { /* Placeholder */ };
   const navToSaving = () => { /* Placeholder */ };
+  const navToAdmin = () => navigation.navigate('AdminDashboard');
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
@@ -56,6 +57,14 @@ export default function MainDashboard({ navigation }) {
           </View>
           <Text style={styles.moduleTitle}>Saving</Text>
           <Text style={styles.moduleDesc}>Track savings goals</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.moduleCard} onPress={navToAdmin}>
+          <View style={[styles.iconContainer, { backgroundColor: COLORS.primaryLight }]}>
+            <Icon name="shield" size={28} color={COLORS.textWhite} />
+          </View>
+          <Text style={styles.moduleTitle}>Admin</Text>
+          <Text style={styles.moduleDesc}>Platform administration</Text>
         </TouchableOpacity>
 
       </View>

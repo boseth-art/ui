@@ -7,6 +7,7 @@ import LoanDashboard from '../screens/LoanDashboard';
 import NewLoan from '../screens/NewLoan';
 import CompareCosts from '../screens/CompareCosts';
 import GenerateReport from '../screens/GenerateReport';
+import AdminDashboard from '../screens/AdminDashboard';
 
 import { COLORS } from '../theme/colors';
 
@@ -54,6 +55,11 @@ export default function AppNavigator() {
         name="GenerateReport" 
         component={GenerateReport} 
         options={{ title: 'Loan Report' }} 
+      />
+      <Stack.Screen 
+        name="AdminDashboard" 
+        component={AdminDashboard} 
+        options={{ title: 'Admin Dashboard' }} 
       />
     </Stack.Navigator>
   );
