@@ -15,17 +15,17 @@ export default function MainDashboard({ navigation }) {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       {/* Overall Summary Section */}
-      <SummaryCard 
-        title="Total Financial Overview" 
-        totalAmount="$12,450.00" 
-        upcomingAmount="$1,200" 
+      <SummaryCard
+        title="Total Financial Overview"
+        totalAmount="$12,450.00"
+        upcomingAmount="$1,200"
       />
 
       {/* Main Modules */}
       <Text style={styles.sectionTitle}>Management Modules</Text>
-      
+
       <View style={styles.modulesGrid}>
-        
+
         <TouchableOpacity style={styles.moduleCard} onPress={navToLoan}>
           <View style={[styles.iconContainer, { backgroundColor: COLORS.primaryExtraLight }]}>
             <Icon name="briefcase" size={28} color={COLORS.link} />
